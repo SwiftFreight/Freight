@@ -28,12 +28,22 @@ import Foundation
 open class Database<T: Container, C> where T.C == C {
 
     public let container: T
+    public let configuration: C?
 
     public init(configuration: C? = nil) throws {
+        self.configuration = configuration
         if let configuration = configuration {
             container = try .init(configuration: configuration)
         } else {
             container = try .init()
+        }
+    }
+
+    open func generate() throws -> T {
+        if let configuration = configuration {
+            return try .init(configuration: configuration)
+        } else {
+            return try .init()
         }
     }
 }
