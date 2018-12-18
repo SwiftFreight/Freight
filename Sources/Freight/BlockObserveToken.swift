@@ -1,5 +1,5 @@
 //
-//  BlockToken.swift
+//  BlockObserveToken.swift
 //  Freight
 //
 //  Copyright (c) 2018 Jason Nam (https://jasonnam.com)
@@ -25,7 +25,7 @@
 
 import Foundation
 
-open class BlockToken: ObserveToken {
+open class BlockObserveToken: ObserveToken {
 
     public let block: () -> ()
 
