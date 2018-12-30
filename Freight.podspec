@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
       'DevelopmentPods/FreightUnitTests/Sources/RealmFreightUnitTests/**/*.{swift}'
     ]
     sp.dependency 'Freight/Core'
-    sp.dependency 'RealmSwift', '~> 3.12.0'
+    sp.dependency 'RealmSwift'
   end
   s.subspec 'UserDefaults' do |sp|
     sp.source_files = [
