@@ -29,4 +29,8 @@ Pod::Spec.new do |s|
     ]
     sp.dependency 'Freight/Core'
   end
+  s.subspec 'CloudKit' do |sp|
+    sp.source_files = 'Sources/CloudKitFreight/**/*.{swift}'
+    sp.dependency 'Freight/Core'
+  end
 end
